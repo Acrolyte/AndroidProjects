@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.practice_room.fragments.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.practice_room.fragments.AddFragment"
+        android:label="Add Item"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.practice_room.fragments.UpdateFragment"
+        android:label="Update Item"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="currentTask"
+            app:argType="com.example.practice_room.data.Task" />
+    </fragment>
+</navigation>
