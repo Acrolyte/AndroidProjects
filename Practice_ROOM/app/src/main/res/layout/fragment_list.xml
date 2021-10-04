@@ -3,16 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pink"
     tools:context=".fragments.ListFragment"
     android:paddingTop="5dp">
 
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/image"
-        android:scaleType="centerCrop"
-        android:alpha="0.5"/>
 
     <ImageView
         android:id="@+id/iv_emptyimage"
@@ -39,6 +33,6 @@
         android:contentDescription="Add Task"
         android:focusable="true"
         android:src="@drawable/ic_add"
-        android:tint="@android:color/white" />
+        android:backgroundTint="@color/yellow2"/>
 
 </RelativeLayout>

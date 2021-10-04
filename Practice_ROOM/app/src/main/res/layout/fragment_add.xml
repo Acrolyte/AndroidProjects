@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pink"
     tools:context=".fragments.AddFragment">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/image"
-        android:scaleType="centerCrop"
-        android:alpha="0.3"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -24,17 +18,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            app:boxStrokeColor="@color/yellow"
-            app:boxBackgroundColor="@color/white"
             android:hint="Enter your text"
-            android:textColorHint="@color/black"
-            android:inputType="text">
+            android:inputType="text"
+            android:textColorHint="#D4D4D4"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="15sp"
+            android:forceDarkAllowed="false"
+            app:boxCornerRadiusBottomStart="15sp"
+            app:boxCornerRadiusTopEnd="15sp"
+            app:boxCornerRadiusTopStart="15sp"
+            app:boxStrokeColor="@color/yellow2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_data_line"
+                android:forceDarkAllowed="false"
                 android:layout_width="match_parent"
-                android:textColor="@color/black"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:textColor="@color/black"/>
 
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -46,10 +46,10 @@
             android:layout_below="@id/til_lay1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="48dp"
+            android:backgroundTint="@color/yellow2"
             android:text="ADD"
-            android:textColor="@color/yellow" />
+            android:textColor="@color/white" />
     </RelativeLayout>
-
 
 
 </RelativeLayout>

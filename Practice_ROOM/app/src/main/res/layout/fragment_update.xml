@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pink"
     tools:context=".fragments.UpdateFragment">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/image"
-        android:scaleType="centerCrop"
-        android:alpha="0.3"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,10 +23,14 @@
             android:layout_marginBottom="10dp"
             android:elevation="40dp"
             android:hint="Enter your text here"
-            app:boxBackgroundColor="@color/white"
-            android:textColorHint="@color/black"
             android:inputType="text"
-            app:boxStrokeColor="@color/yellow">
+            android:textColorHint="@color/grey"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="15sp"
+            app:boxCornerRadiusBottomStart="15sp"
+            app:boxCornerRadiusTopEnd="15sp"
+            app:boxCornerRadiusTopStart="15sp"
+            app:boxStrokeColor="@color/yellow2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_data_line"
@@ -49,8 +48,9 @@
             android:layout_below="@id/til_lay1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="48dp"
-            android:textColor="@color/yellow"
-            android:text="Update" />
+            android:backgroundTint="@color/yellow2"
+            android:text="Update"
+            android:textColor="@color/white" />
     </RelativeLayout>
 
 </RelativeLayout>
